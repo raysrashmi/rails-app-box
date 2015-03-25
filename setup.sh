@@ -40,18 +40,5 @@ sudo -u postgres createuser --superuser vagrant
 sudo su postgres createdb -O vagrant_development
 sudo su postgres createdb -O vagrant_test
 
-#clone repository
-rm -rf vagrant-test
-echo "$(pwd)"
-cd /vagrant
-git clone https://github.com/raysrashmi/vagrant-test.git
-cd vagrant-test
-echo "$(pwd) $(whoami)"
-bundle
-rails s -b 0.0.0.0
-# install Npm npm
-# install 'ExecJS runtime' nodejs
-# npm install -g bower
-
 echo 'all set, rock on!'
 
